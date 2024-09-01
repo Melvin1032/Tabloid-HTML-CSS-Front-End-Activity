@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    padding-top: 6rem;
+    padding-bottom: 17rem;
+    background:linear-gradient(
+        rgba(255, 255, 255, 0.644), 
+        rgba(255, 255, 255, 0.5)
+    ), url(news.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.container {
+    display: grid;
+    width: 900px;
+    height: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 1.5fr 1.5fr 1.4fr 1fr 1fr;
+    grid-template-areas: 
+                         "nav nav nav nav nav"
+                         "sidebar main main main content4"
+                         "sidebar content1 content2 content3 content5"
+                         "sidebar content6 content6 content6 content6"
+                         "sidebar content7 content7 content8 content8"
+                         "bottomheadline bottomheadline bottomheadline content8 content8";
+    grid-gap: 0.2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+nav {
+    background-color: rgb(179, 0, 0);
+    grid-area: nav;
+    
+
+}
+
+nav h1 {
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 1.75rem;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+
+main {
+    background-image: url(news.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: main;
+    border: 1px solid black;
+}
+
+main img {
+    position: relative;
+    width: 530px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    
+}
+
+
+
+#sidebar {
+    grid-area: sidebar;
+    background: rgb(88,202,255);
+    background-image: url(jb.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+
+
+#sidebar #pbalogo img {
+    width: 10rem;
+    transform: translateX(10px);
+    z-index: 1;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#sidebar img {
+    position: absolute;
+    width: 25rem;
+    transform: translateX(-100px); 
+    z-index: 2;
+    
+}
+
+#sidebar h1 {
+    position: relative;
+    font-size: 1.4rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    top: 29.7rem;
+    padding: 10px;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+#content1 {
+    background-image: url(wps.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: content1;
+
+}
+
+#content1 h1 {
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    top: 29.7rem;
+    padding:5px;
+    margin-top: 115px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+#content2 {
+    background-image: url(quibs.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#content2 h1 {
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    top: 29.7rem;
+    padding:5px;
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+
+#content3 {
+    background-image: url(vball.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-area: content3;
+}
+
+#content3 h1 {
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    top: 29.7rem;
+    padding:5px;
+    margin-top: 115px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+#content4 {
+    background-color: lightcoral;
+    grid-area: content4;
+    background-image: url(mpox.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    
+}
+
+#content4 h1 {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 120px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+
+
+
+#content5 {
+    background: url(wantedBG.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: content5;
+}
+
+
+
+#content5 img {
+    position: absolute;
+    width: 7rem;
+    transform: rotate(20deg);
+    margin-top: -11rem;
+    padding-left: 2rem;
+}
+
+#content5 h1 {
+    position: relative;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    justify-content: center;
+    text-shadow: 1px 1px 1px black;
+    padding:5px;
+    margin-top: 127px;
+    background-color: rgba(0, 0, 0, 0.541);
+    z-index: 2;
+}
+
+
+
+#content6 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.644), 
+        rgba(0, 0, 0, 0.5)
+    ), 
+    url(brpbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: content6;
+}
+
+#content6 {
+    justify-content: center;
+    padding-left: 35%;
+    padding-top: 2%;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+#content6 img {
+    position: absolute;
+    width: 13.7rem;
+    transform: translateY(-15px);
+    margin-left: -15.7rem;
+}
+
+#content6 h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px black;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+
+
+
+
+
+#content7 {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(0, 0, 0, 0.712)
+    ),  url(andy.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    grid-area: content7;
+}
+
+
+
+#content7 h1 {
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: 4.5rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+
+#content8 {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(0, 0, 0, 0.712)
+    ),  url(MPL-PH-Hall-of-Legends-1024x576.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    grid-area: content8;
+}
+
+#content8 h1 {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 8.8rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+
+.bottomheadline {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0), 
+        rgba(0, 0, 0, 0.712)
+    ),  url(balikatan2025.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: bottomheadline;
+}
+
+.bottomheadline h1 {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 5rem;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+
+footer {
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    bottom: -22rem;
+}
+
+footer h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: rgb(37, 37, 37);
+}
+
+footer h2 {
+    font-family: sans-serif;
+    padding-top: 10px;
+    font-size: 1rem;
+    color: rgb(92, 92, 92);
+}
